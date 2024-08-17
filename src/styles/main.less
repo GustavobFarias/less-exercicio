@@ -22,27 +22,6 @@ li {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-
-    @media @breakpointMobile {
-        .products {
-            display: block;
-    
-            &-product-item  {
-                margin-bottom: 32px;
-            }
-        }
-    }
-
-    @media @breakpointTablet {
-        .container {
-            max-width: 80%;
-        }
-    
-        .products {
-            grid-template-columns: repeat(2, 48.5%);
-            column-gap: 3%;
-        }
-    }
 }
 
 header {
@@ -103,5 +82,31 @@ section {
     
     .product-button:hover {
         background-color: #colors[colorDoHover];
+    }
+}
+
+@media @breakpointMobile {
+        
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        display: block;
+
+        .product-item  {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media @breakpointTablet {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
     }
 }
